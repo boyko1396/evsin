@@ -935,8 +935,11 @@ a:hover {
   letter-spacing: 0.005em;
   text-transform: uppercase;
 }
+.info-section__hero {
+  margin: 0 10rem 40rem;
+}
 .info-section__hero-slider {
-  overflow: hidden;
+  margin: 0 0 40rem;
 }
 .info-section__hero img {
   width: 100%;
