@@ -1,0 +1,224 @@
+/* Headings, Common BEM Blocks, and More... */
+
+.u-link,
+a {
+  transition: $transition;
+  &:hover {
+    color: $lightBlue1Color;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: inherit;
+  font-size: var(--btn-font-size);
+  line-height: $lineHeightDefault;
+  font-family: $fontFamily;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: .005em;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  user-select: none;
+  transition: $transition;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+  &:hover {
+    text-decoration: none;
+  }
+  &.disabled,
+  &:disabled {
+    opacity: .6;
+    pointer-events: none;
+  }
+  &--theme {
+    &-dark {
+      background: transparent;
+      box-shadow: inset 0 0 0 1rem $blackColor;
+      border-radius: $radiusMd;
+      .btn__title {
+        background: $blackColor;
+        color: $whiteColor;
+        border-radius: $radiusMd;
+      }
+      &:hover {
+      }
+    }
+  }
+  &--size {
+    &-md {
+      --btn-height: 42rem;
+      --btn-padding-x: 16rem;
+      --btn-padding-y: 8rem;
+      --btn-font-size: var(--fs-5);
+    }
+  }
+  &__inner {
+    min-height: var(--btn-height);
+    display: flex;
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+  }
+  &__title {
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  &__icon-wrapper {
+    margin: 0 26rem 0 24rem;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  &__icon {
+    width: 22rem;
+    height: 14rem;
+    display: block;
+  }
+}
+
+.content {
+  font-family: $accentFont;
+  line-height: 1.25;
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0 0 1em;
+  }
+  a {
+    @extend .u-link;
+  }
+}
+
+.guide-card {
+  &__btn {
+    @extend %btn-reset;
+    background: $whiteColor;
+    width: 100%;
+    min-height: 32rem;
+    padding: 6rem 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-size: var(--fs-5);
+    border: 1rem solid $lightGrayColor;
+    border-radius: 30rem;
+    position: relative;
+    z-index: 1;
+    &-title {
+      margin: 0;
+      font-weight: inherit;
+      font-size: inherit;
+      font-family: inherit;
+    }
+  }
+  &__content {
+    background: rgba($blueColor, .15);
+    margin-top: -24rem;
+    padding: 40rem 20rem 16rem 28rem;
+    font-size: var(--fs-5);
+    font-family: $mainFont;
+    line-height: 1.55;
+    border: 1rem solid $lightGrayColor;
+    border-radius: 16rem;
+  }
+  &:not(.is-show) &__content {
+    display: none;
+  }
+}
+
+.faq-card {
+  font-family: $mainFont;
+  &__item {
+    backdrop-filter: blur(8rem);
+    padding: 20rem 13rem;
+    display: flex;
+    align-items: flex-start;
+    border: 1rem solid $lightGrayColor;
+    border-radius: 16rem;
+    &--user {
+      background: rgba($blueColor, .15);
+      margin: 0 16rem 16rem -16rem;
+    }
+    &--answer {
+      background: rgba($whiteColor, .15);
+      margin: -32rem -16rem 16rem 16rem;
+      .faq-card__item-content {
+        padding-left: 20rem;
+      }
+      .faq-card__item-header {
+        margin-bottom: 10rem;
+      }
+    }
+    &-avatar {
+      background: $whiteColor;
+      width: 36rem;
+      height: 36rem;
+      margin-right: 10rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border: 1rem solid $lightGrayColor;
+      border-radius: 50%;
+      flex-shrink: 0;
+      overflow: hidden;
+      img {
+        width: 30rem;
+        height: 30rem;
+        display: block;
+        object-fit: contain;
+        object-position: center bottom;
+      }
+    }
+    &-content {
+      margin: 0 0 6rem;
+      font-size: var(--fs-4);
+      flex-grow: 1;
+    }
+    &-header {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      &-name {
+        margin: 0;
+        font-weight: bold;
+        font-size: var(--fs-4);
+        font-family: $mainFont;
+        text-transform: uppercase;
+        letter-spacing: .005em;
+      }
+      &-verification {
+        width: 18rem;
+        height: 14rem;
+        margin-right: 4rem;
+        flex-shrink: 0;
+        color: $brightBlueColor;
+      }
+    }
+    &-text {
+      font-size: var(--fs-4);
+      font-family: $mainFont;
+      letter-spacing: .005em;
+    }
+  }
+}
+
+.faq-card__item--answer + .faq-card__item--user {
+  margin-left: 92rem;
+}

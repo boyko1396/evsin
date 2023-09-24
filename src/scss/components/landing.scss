@@ -1,0 +1,201 @@
+.intro {
+  padding: 55rem 0 37rem;
+  &__container {
+  }
+  &__title {
+    margin: 0 0 2rem;
+    font-weight: bold;
+    letter-spacing: .005em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__subtitle {
+    margin: 0 0 26rem;
+    line-height: 1.3;
+    letter-spacing: .005em;
+    text-align: center;
+  }
+  &__hero {
+    margin: 0 -28rem 36rem;
+    position: relative;
+    z-index: 0;
+    &:before {
+      background: $lightBlue1Color;
+      width: 104vw;
+      height: 104vw;
+      content: '';
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(34rem);
+      z-index: -1;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__description {
+    margin: 0 -8rem 22rem;
+    text-align: center;
+  }
+  &__btn {
+  }
+}
+
+.info-section {
+  padding: 40rem 0 30rem;
+  &__container {
+  }
+  &__list-info {
+    margin: 0 0 36rem 20rem;
+    padding: 0 0 0 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style-type: none;
+    font-size: var(--fs-3);
+    text-transform: uppercase;
+    position: relative;
+    z-index: 0;
+    &:before {
+      background: url(../images/evsin-y.svg) left center no-repeat;
+      background-size: contain;
+      width: 100%;
+      content: '';
+      position: absolute;
+      top: 2rem;
+      bottom: 2rem;
+      left: 0;
+      z-index: -1;
+    }
+    li {
+      background: rgba($whiteColor, .2);
+      backdrop-filter: blur(8rem);
+      margin: 0;
+      padding: 4rem 24rem 3rem;
+      border: 1rem solid $lightGrayColor;
+      border-radius: $radiusMd;
+      &:not(:last-child) {
+        margin-bottom: 12rem;
+      }
+    }
+  }
+  &__list {
+    margin: 0 50rem 48rem;
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: 27rem;
+      }
+      &-title {
+        margin: 0 0 4rem;
+        font-weight: normal;
+        line-height: 1.28;
+        letter-spacing: .005em;
+        text-transform: uppercase;
+      }
+      &-text {
+      }
+    }
+  }
+  &__hero {
+    margin: 0 20rem 40rem;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10rem;
+    }
+  }
+  &__btn {
+  }
+}
+
+.guide-section {
+  padding: 35rem 0;
+  &__container {
+  }
+  &__hero {
+    width: 100%;
+    max-width: 158rem;
+    margin: 0 auto 22rem;
+    position: relative;
+    z-index: 0;
+    &:before {
+      background: $lightBlue2Color;
+      width: 210rem;
+      height: 210rem;
+      content: '';
+      border-radius: 50%;
+      position: absolute;
+      top: 30rem;
+      right: 20rem;
+      filter: blur(34rem);
+      z-index: -1;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__list {
+    padding: 20rem 0 36rem;
+    position: relative;
+    z-index: 0;
+    &:before {
+      background: url(../images/evsin-x.svg) left center no-repeat;
+      background-size: contain;
+      width: 116rem;
+      height: 31rem;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: 8rem;
+      }
+    }
+  }
+  &__btn {
+  }
+}
+
+.faq-section {
+  padding: 45rem 0 20rem;
+  &__container {
+  }
+  &__list {
+    padding-bottom: 18rem;
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: 22rem;
+      }
+    }
+  }
+  &__btn {
+  }
+}
+
+.footer {
+  padding: 20rem 0 40rem;
+  font-size: var(--fs-5);
+  text-align: center;
+  &__container {
+  }
+  &__copyright {
+    margin: 0 0 2rem;
+  }
+  &__author {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
