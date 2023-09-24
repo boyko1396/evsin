@@ -10,6 +10,7 @@
 // support webp, identify device
 import BaseHelpers from './helpers/BaseHelpers.js';
 import GuideCard from './modules/GuideCard.js';
+import SliderInit from './modules/SliderInit.js';
 
 BaseHelpers.checkWebpSupport();
 BaseHelpers.addTouchClass();

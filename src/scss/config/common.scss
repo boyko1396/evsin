@@ -75,6 +75,11 @@ a {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+    transition: all .2s;
+  }
+  &:hover &__title,
+  &:focus &__title {
+    margin-right: -74rem;
   }
   &__icon-wrapper {
     margin: 0 26rem 0 24rem;
